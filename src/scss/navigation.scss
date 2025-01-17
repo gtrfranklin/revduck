@@ -1,0 +1,130 @@
+﻿@import "bootstrap/scss/bootstrap.scss";
+
+.navbar > .revduck-nav {
+    @extend .container;
+    justify-content: left;
+    max-width: 1920px;
+    padding: 0;
+    @include media-breakpoint-down(lg) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        // The bootstrap navbar has padding of 8px;
+        margin-top: 8px;
+    }
+    @include media-breakpoint-up(lg) {
+        // The bootstrap navbar has padding of 8px;
+        margin-top: 52px;
+        padding-left: 78px;
+        padding-right: 70px;
+    }
+}
+
+.revduck-menu {
+    @include media-breakpoint-down(lg) {
+        background-image: url("../assets/menu-reverse.svg");
+        width: 32px;
+        height: 26px;
+        margin-right: 16px;
+    }
+    @include media-breakpoint-up(lg) {
+        background-image: url("../assets/menu.svg");
+        width: 50.6px;
+        height: 39.6px;
+        margin-right: 38px;
+    }
+}
+
+.revduck-logo {
+    @include media-breakpoint-down(lg) {
+        width: 95px;
+        height: 29.49px;
+        margin-left: 16px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        width: 202.4px;
+        height: 62.84px;
+    }
+}
+
+.revduck-sign-buttons {
+    a {
+        padding: 0;
+        margin: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-left: auto;
+        .revduck-sign-up {
+            margin-left: 14px;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        > ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            width: 100%;
+            margin: 0;
+
+            > li {
+                width: 158px;
+            }
+        }
+
+        .revduck-sign-up {
+            margin-left: 6px;
+        }
+        .revduck-sign-in {
+            margin-left: -6px;
+        }
+
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .revduck-sign-button {
+        font-family: 'Audiowide', sans-serif;
+        text-align: center;
+        vertical-align: center;
+        line-height: 22px;
+        @include media-breakpoint-down(lg) {
+            width: 158px;
+            height: 60px;
+            font-size: 18px;
+        }
+        @include media-breakpoint-up(lg) {
+            width: 169px;
+            height: 66px;
+            font-size: 20px;
+        }
+
+        background-size: cover;
+        transition: background-image 0.5s ease, color 0.5s ease;
+    }
+
+    .revduck-sign-in {
+        @extend .revduck-sign-button;
+        background-image: url("../assets/sign-in.svg");
+        color: #FF2D34;
+
+        &:hover {
+            background-image: url("../assets/sign-in-hover.svg");
+            color: #FFFFFF;
+        }
+    }
+
+    .revduck-sign-up {
+        @extend .revduck-sign-button;
+        background-image: url("../assets/sign-up.svg");
+        color: #FFFFFF;
+
+        &:hover {
+            background-image: url("../assets/sign-up-hover.svg");
+            color: #FF2D34;
+        }
+    }
+}

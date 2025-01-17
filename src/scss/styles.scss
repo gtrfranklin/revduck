@@ -1,5 +1,8 @@
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap.scss";
+@import "navigation.scss";
 
-// This template has no custom styling
-// Insert any custom SCSS here!
+body {
+    background-color: black;
+}
+
