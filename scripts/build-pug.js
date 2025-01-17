@@ -2,6 +2,7 @@
 const upath = require('upath');
 const sh = require('shelljs');
 const renderPug = require('./render-pug');
+const renderHtml = require('./render-html');
 
 const srcPath = upath.resolve(upath.dirname(__filename), '../src');
 
@@ -15,5 +16,13 @@ function _processFile(filePath) {
         && !filePath.match(/\/pug\/layouts\//)
     ) {
         renderPug(filePath);
+    }
+
+    if (
+        filePath.match(/\.html$/)
+        && !filePath.match(/include/)
+        && !filePath.match(/mixin/)
+    ) {
+        renderHtml(filePath);
     }
 }
