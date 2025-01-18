@@ -1,0 +1,39 @@
+﻿.screen1-container {
+    position: relative;
+    min-height: 1251px;
+    width: 100%;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.74; // Adjust the opacity value as needed
+        z-index: -1;
+
+        background-image: url("../assets/main_background.jpg"), url("../assets/main_background_25percent.jpg");
+        background-repeat: no-repeat;
+        @media (max-width: 1920px) {
+            background-size: 1920px 1080px;
+            background-position: calc((100vw - 1920px) / 2) top;
+        }
+        @media (min-width: 1920px) {
+            background-size: calc(100vw) calc(100vh);
+        }
+    }
+
+    .revduck-mascot-img {
+        transform: scale(-1, 1);
+        @include media-breakpoint-down(lg) {
+            width: 212.71px;
+            height: 273.54px;
+        }
+        @include media-breakpoint-up(lg) {
+            width: 441.03px;
+            height: 558.36px;
+            margin-top: 86px;
+        }
+    }
+}

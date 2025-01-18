@@ -1,10 +1,28 @@
-﻿@import "bootstrap/scss/bootstrap.scss";
+﻿@import "bootstrap/scss/variables.scss";
+
+.revduck-navbar {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    transition: background-color 0.3s ease, margin-top 0.3s ease, margin-bottom 0.3s ease;
+}
+
+.scrolled {
+    background-color: #0C0F20;
+
+    &.navbar > .revduck-nav {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+}
 
 .navbar > .revduck-nav {
     @extend .container;
     justify-content: left;
     max-width: 1920px;
     padding: 0;
+    width: 100%;
     @include media-breakpoint-down(lg) {
         flex-direction: row-reverse;
         justify-content: space-between;
