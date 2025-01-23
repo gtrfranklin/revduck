@@ -3,5 +3,11 @@
 * Copyright 2013-2025 gtrfranklin
 * Licensed under copyright (https://github.com/StartBootstrap/revduck/blob/master/LICENSE)
 */
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+document.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.revduck-navbar');
+    if (window.scrollY > 16) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});

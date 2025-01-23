@@ -12032,6 +12032,11 @@ textarea.form-control-lg {
   width: 100%;
   transition: background-color 0.3s ease, margin-top 0.3s ease, margin-bottom 0.3s ease;
 }
+@media (max-width: 991.98px) {
+  .revduck-navbar {
+    background-color: #0C0F20;
+  }
+}
 
 .scrolled {
   background-color: #0C0F20;
@@ -12172,6 +12177,31 @@ textarea.form-control-lg {
   position: relative;
   min-height: 1251px;
   width: 100%;
+  overflow-x: hidden;
+}
+.screen1-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("../assets/neons.svg");
+  background-repeat: no-repeat;
+  background-size: 1920px 1080px;
+  background-position: calc((100vw - 1920px) / 2) -179px;
+}
+@media (min-width: 1921px) {
+  .screen1-container::before {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .screen1-container::before {
+    background-size: 1920px 980px;
+    background-position: calc((100vw - 1920px) / 2) -350px;
+  }
 }
 .screen1-container::after {
   content: "";
@@ -12181,19 +12211,25 @@ textarea.form-control-lg {
   right: 0;
   bottom: 0;
   opacity: 0.74;
-  z-index: -1;
+  z-index: -2;
   background-image: url("../assets/main_background.jpg"), url("../assets/main_background_25percent.jpg");
   background-repeat: no-repeat;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1921px) and (min-width: 992px) {
   .screen1-container::after {
     background-size: 1920px 1080px;
     background-position: calc((100vw - 1920px) / 2) top;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
   .screen1-container::after {
     background-size: 100vw 100vh;
+  }
+}
+@media (max-width: 991.98px) {
+  .screen1-container::after {
+    background-size: 1920px 980px;
+    background-position: calc((100vw - 1920px) / 2) -240px;
   }
 }
 .screen1-container .revduck-mascot-img {
@@ -12203,6 +12239,7 @@ textarea.form-control-lg {
   .screen1-container .revduck-mascot-img {
     width: 212.71px;
     height: 273.54px;
+    margin-top: 102px;
   }
 }
 @media (min-width: 992px) {
@@ -12212,11 +12249,460 @@ textarea.form-control-lg {
     margin-top: 86px;
   }
 }
+.screen1-container .revduck-join-the-team-wrapper {
+  margin-top: -20px;
+  z-index: 2;
+}
+.screen1-container .revduck-lead-the-flock-img {
+  z-index: 2;
+  width: 941px;
+  height: 165px;
+}
+@media (max-width: 991.98px) {
+  .screen1-container .revduck-lead-the-flock-img {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .screen1-container .revduck-lead-the-flock-img {
+    display: block;
+  }
+}
+.screen1-container .revduck-lead-the-flock-img-small {
+  z-index: 2;
+  width: 310px;
+  height: 54px;
+}
+@media (max-width: 991.98px) {
+  .screen1-container .revduck-lead-the-flock-img-small {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .screen1-container .revduck-lead-the-flock-img-small {
+    display: none;
+  }
+}
+.screen1-container .revduck-join-the-team-btn {
+  z-index: 3;
+  background-image: url("../assets/join-the-team.svg");
+  cursor: pointer;
+}
+.screen1-container .revduck-join-the-team-btn:hover {
+  background-image: url("../assets/join-the-team-hover.svg");
+}
+@media (max-width: 991.98px) {
+  .screen1-container .revduck-join-the-team-btn {
+    width: 266px;
+    height: 76px;
+    background-size: 266px 76px;
+    margin-top: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .screen1-container .revduck-join-the-team-btn {
+    width: 423px;
+    height: 120.26px;
+    background-size: 423px 120.26px;
+    margin-top: 44px;
+  }
+}
+.screen1-container .revduck-meet-us-triangle {
+  position: relative;
+  width: 100%;
+  height: 134px;
+  margin-top: -104px;
+  z-index: 2;
+}
+.screen1-container .revduck-meet-us-triangle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-bottom: 134px solid #0C0F20; /* Change the color as needed */
+}
+@media (max-width: 991.98px) {
+  .screen1-container .revduck-meet-us-triangle::before {
+    border-bottom: 100px solid #0C0F20; /* Change the color as needed */
+  }
+}
+@media (max-width: 991.98px) {
+  .screen1-container .revduck-meet-us-triangle {
+    margin-top: -69px;
+  }
+}
+.screen1-container .revduck-meet-us-wrapper {
+  margin-top: -1px;
+  background-color: #0C0F20;
+  min-height: 300px;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+@media (max-width: 991.98px) {
+  .screen1-container .revduck-meet-us-wrapper {
+    margin-top: -40px;
+  }
+}
+.screen1-container .revduck-meet-us-text {
+  z-index: 4;
+}
+@media (max-width: 991.98px) {
+  .screen1-container .revduck-meet-us-text {
+    background-image: url("../assets/meet-us-small.svg");
+    background-size: 340px 55.4px;
+    width: 340px;
+    height: 55.4px;
+  }
+}
+@media (min-width: 992px) {
+  .screen1-container .revduck-meet-us-text {
+    background-image: url("../assets/meet-us.svg");
+    background-size: 1275px 153px;
+    width: 1275px;
+    height: 153px;
+  }
+}
+.screen1-container .revduck-frames-wrapper {
+  white-space: nowrap;
+  margin-top: 8px;
+  overflow-x: auto;
+  display: flex;
+  flex: 1;
+  position: relative;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.screen1-container .revduck-frames-wrapper::-webkit-scrollbar {
+  height: 8px;
+  margin-right: 16px;
+}
+.screen1-container .revduck-frames-wrapper::-webkit-scrollbar-track {
+  background: #182756; /* Color of the scrollbar track */
+}
+.screen1-container .revduck-frames-wrapper::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF; /* Color of the scrollbar thumb */
+}
+@media (min-width: 1528px) {
+  .screen1-container .revduck-frames-wrapper {
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 58px;
+  }
+}
+@media (max-width: 1528px) {
+  .screen1-container .revduck-frames-wrapper {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+  }
+}
+.screen1-container .revduck-frames-wrapper .revduck-meet-us-frame {
+  display: inline-block;
+  background-image: url("../assets/frames/meet-us-frame.svg");
+  cursor: pointer;
+  position: relative;
+}
+.screen1-container .revduck-frames-wrapper .revduck-meet-us-frame:hover {
+  background-image: url("../assets/frames/meet-us-frame-hover.svg");
+}
+@media (max-width: 991.98px) {
+  .screen1-container .revduck-frames-wrapper .revduck-meet-us-frame {
+    margin-right: 16px;
+    background-size: 295px 150px;
+    width: 295px;
+    height: 150px;
+    min-width: 295px;
+    min-height: 150px;
+  }
+  .screen1-container .revduck-frames-wrapper .revduck-meet-us-frame .revduck-frame-logo {
+    position: absolute;
+    display: block;
+    right: 24.5px;
+    margin-top: 68px;
+    transform: scale(0.71);
+    transform-origin: right;
+  }
+}
+@media (min-width: 992px) {
+  .screen1-container .revduck-frames-wrapper .revduck-meet-us-frame {
+    margin-right: 40px;
+    background-size: 464px 235.04px;
+    width: 464px;
+    height: 235.04px;
+    min-width: 464px;
+    min-height: 235.04px;
+  }
+  .screen1-container .revduck-frames-wrapper .revduck-meet-us-frame .revduck-frame-logo {
+    position: absolute;
+    display: block;
+    margin-left: 286px;
+    margin-top: 113px;
+    right: 37.8px;
+  }
+}
+.screen1-container .revduck-frames-wrapper .revduck-meet-us-frame .revduck-frame-country-date {
+  position: absolute;
+  font-family: "Audiowide", sans-serif;
+  color: #FFFFFF;
+}
+@media (min-width: 992px) {
+  .screen1-container .revduck-frames-wrapper .revduck-meet-us-frame .revduck-frame-country-date {
+    margin-left: 39px;
+    margin-top: 42.4px;
+    line-height: 17.6px;
+    font-size: 16px;
+  }
+  .screen1-container .revduck-frames-wrapper .revduck-meet-us-frame .revduck-frame-country-date .revduck-frame-date {
+    font-size: 12.8px;
+    line-height: 14.4px;
+    margin-top: 12px;
+  }
+}
+@media (max-width: 991.98px) {
+  .screen1-container .revduck-frames-wrapper .revduck-meet-us-frame .revduck-frame-country-date {
+    margin-left: 23.39px;
+    margin-top: 25.09px;
+    line-height: 14.4px;
+    font-size: 16px;
+  }
+  .screen1-container .revduck-frames-wrapper .revduck-meet-us-frame .revduck-frame-country-date .revduck-frame-date {
+    margin-top: 7.78px;
+    font-size: 12px;
+    line-height: 10.8px;
+  }
+}
+
+.revduck-testimonials-screen {
+  position: relative;
+  background-color: rgba(13, 16, 33, 0);
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .revduck-testimonials-screen {
+    background-image: url("../assets/testimonials/testimonials-bg.svg");
+    background-repeat: no-repeat;
+    background-position-y: calc((100vw - 1920px) * 0.2276785714 * -1 - 434px);
+    background-size: 100% auto;
+    min-height: 1845px;
+    z-index: -1;
+  }
+}
+@media (min-width: 1920px) {
+  .revduck-testimonials-screen {
+    background-position-y: calc((100vw - 1920px) * 0.6276785714 * -1 - 434px);
+  }
+}
+.revduck-testimonials-screen .revduck-testimonials-mac-like-screen {
+  position: absolute;
+  top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: -1;
+}
+@media (max-width: 991.98px) {
+  .revduck-testimonials-screen .revduck-testimonials-mac-like-screen {
+    display: none;
+  }
+}
+.revduck-testimonials-screen .revduck-see-all-btn {
+  font-family: "Audiowide", sans-serif;
+  text-underline-position: from-font;
+  text-decoration: none;
+  text-align: left;
+  background-image: url("../assets/testimonials/see-all-btn.svg");
+  color: #FFFFFF;
+}
+@media (max-width: 991.98px) {
+  .revduck-testimonials-screen .revduck-see-all-btn {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 13.2px;
+    letter-spacing: 0.06em;
+    width: 170px;
+    height: 40px;
+    background-size: 170px 40px;
+    padding-left: 61.3px;
+    margin-top: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .revduck-testimonials-screen .revduck-see-all-btn {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    width: 285px;
+    height: 66px;
+    background-size: 285px 66px;
+    padding-left: 104px;
+    margin-top: 32px;
+  }
+}
+.revduck-testimonials-screen .revduck-see-all-btn:hover {
+  background-image: url("../assets/testimonials/see-all-btn-hover.svg");
+  color: #FF2D34;
+}
+.revduck-testimonials-screen .revduck-those-who-trust-txt {
+  color: #FFFFFF;
+  font-family: "Audiowide", sans-serif;
+  font-size: 74px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+@media (max-width: 991.98px) {
+  .revduck-testimonials-screen .revduck-those-who-trust-txt {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.06em;
+    margin-top: 24.4px;
+  }
+}
+.revduck-testimonials-screen .revduck-our-friends-txt {
+  z-index: 3;
+  margin-top: 101px;
+}
+@media (max-width: 991.98px) {
+  .revduck-testimonials-screen .revduck-our-friends-txt {
+    width: 306px;
+    height: 46px;
+    margin-top: 65px;
+  }
+}
+
+.revduck-card-block-wrapper {
+  margin-top: 120px;
+}
+@media (max-width: 991.98px) {
+  .revduck-card-block-wrapper {
+    margin-top: 50px;
+  }
+}
+.revduck-card-block-wrapper .revduck-card-block {
+  width: 100%;
+  height: 507px;
+}
+@media (min-width: 1778.45px) {
+  .revduck-card-block-wrapper .revduck-card-block {
+    width: 1778.45px;
+  }
+}
+
+.revduck-faq-wrapper {
+  position: relative;
+  z-index: 4;
+}
+@media (min-width: 992px) {
+  .revduck-faq-wrapper {
+    margin-top: -402px;
+  }
+}
+
+.revduck-faq-question-marks {
+  min-height: 100px;
+}
+@media (max-width: 991.98px) {
+  .revduck-faq-question-marks {
+    width: 231px;
+    height: 46px;
+    margin-top: 50.4px;
+  }
+}
+
+.revduck-faq-title {
+  font-family: "Audiowide", "sans-serif";
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 81.59px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #FFFFFF;
+  margin-top: -47px;
+}
+@media (max-width: 991.98px) {
+  .revduck-faq-title {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 33.15px;
+    letter-spacing: 0.06em;
+    margin-top: -57px;
+  }
+}
+
+.revduck-faq-item-container {
+  max-width: 1514px;
+}
+
+.revduck-faq-item {
+  width: 513px;
+}
+@media (min-width: 1513px) {
+  .revduck-faq-item {
+    width: 750px;
+  }
+}
+.revduck-faq-item .revduck-faq-item-btn {
+  font-family: "Audiowide", "sans-serif";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28.8px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #FFFFFF;
+  position: relative;
+  cursor: pointer;
+}
+.revduck-faq-item .revduck-faq-item-btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../assets/faq/cross.svg");
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg);
+}
+.revduck-faq-item .revduck-faq-item-btn.collapsed:after {
+  transform: none;
+}
+.revduck-faq-item .revduck-faq-item-text {
+  font-family: "Montserrat", "sans-serif";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
 
 body {
   position: relative;
   /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-  background-color: #141A3D;
+  background-color: #0c0f20;
   background-repeat: no-repeat;
   background-size: contain;
 }

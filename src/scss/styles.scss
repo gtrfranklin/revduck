@@ -2,11 +2,15 @@
 @import "bootstrap/scss/bootstrap.scss";
 @import "navigation.scss";
 @import "screen1.scss";
+@import "testimonials-screen.scss";
+@import "card-block.scss";
+@import "faq.scss";
 
 body {
     position: relative;
     /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-    background-color: #141A3D;
+    //background-color: #141A3D;
+    background-color: #0c0f20;
     background-repeat: no-repeat;
     background-size: contain;
     p{

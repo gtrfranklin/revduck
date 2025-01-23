@@ -2,7 +2,36 @@
     position: relative;
     min-height: 1251px;
     width: 100%;
+    overflow-x: hidden;
 
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+
+        background-image: url("../assets/neons.svg");
+        background-repeat: no-repeat;
+
+        background-size: 1920px 1080px;
+        background-position: calc((100vw - 1920px) / 2) -179px;
+        //@media (max-width: 1921px) and (min-width: 992px) {
+        //    background-size: 1920px 1080px;
+        //    background-position: calc((100vw - 1920px) / 2) -179px;
+        //}
+        @media (min-width: 1921px) {
+            display: none;
+        }
+        //
+        @include media-breakpoint-down(lg) {
+            background-size: 1920px 980px;
+            background-position: calc((100vw - 1920px) / 2) -350px;
+        }
+
+    }
     &::after {
         content: "";
         position: absolute;
@@ -11,16 +40,22 @@
         right: 0;
         bottom: 0;
         opacity: 0.74; // Adjust the opacity value as needed
-        z-index: -1;
+        z-index: -2;
 
         background-image: url("../assets/main_background.jpg"), url("../assets/main_background_25percent.jpg");
         background-repeat: no-repeat;
-        @media (max-width: 1920px) {
+
+        @media (max-width: 1921px) and (min-width: 992px) {
             background-size: 1920px 1080px;
             background-position: calc((100vw - 1920px) / 2) top;
         }
-        @media (min-width: 1920px) {
+        @media (min-width: 1921px) {
             background-size: calc(100vw) calc(100vh);
+        }
+
+        @include media-breakpoint-down(lg) {
+            background-size: 1920px 980px;
+            background-position: calc((100vw - 1920px) / 2) -240px;
         }
     }
 
@@ -29,11 +64,244 @@
         @include media-breakpoint-down(lg) {
             width: 212.71px;
             height: 273.54px;
+            margin-top: 102px;
         }
         @include media-breakpoint-up(lg) {
             width: 441.03px;
             height: 558.36px;
             margin-top: 86px;
+        }
+    }
+
+    .revduck-join-the-team-wrapper {
+        margin-top: -20px;
+        z-index: 2;
+    }
+
+    .revduck-lead-the-flock-img {
+        z-index: 2;
+        width: 941px;
+        height: 165px;
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
+    }
+
+    .revduck-lead-the-flock-img-small {
+        z-index: 2;
+        width: 310px;
+        height: 54px;
+        @include media-breakpoint-down(lg) {
+            display: block;
+        }
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+    }
+
+    .revduck-join-the-team-btn {
+        z-index: 3;
+        background-image: url("../assets/join-the-team.svg");
+
+        &:hover {
+            background-image: url("../assets/join-the-team-hover.svg");
+        }
+
+        cursor: pointer;
+
+        @include media-breakpoint-down(lg) {
+            width: 266px;
+            height: 76px;
+            background-size: 266px 76px;
+            margin-top: 24px;
+        }
+        @include media-breakpoint-up(lg) {
+            width: 423px;
+            height: 120.26px;
+            background-size: 423px 120.26px;
+            margin-top: 44px;
+        }
+    }
+
+    .revduck-meet-us-triangle {
+        position: relative;
+        width: 100%;
+        height: 134px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 50vw solid transparent;
+            border-right: 50vw solid transparent;
+            border-bottom: 134px solid #0C0F20; /* Change the color as needed */
+            @include media-breakpoint-down(lg){
+                border-bottom: 100px solid #0C0F20; /* Change the color as needed */
+            }
+        }
+
+        margin-top: -104px;
+
+        @include media-breakpoint-down(lg){
+            margin-top: -69px;
+        }
+        z-index: 2;
+    }
+
+    .revduck-meet-us-wrapper {
+        margin-top: -1px;
+        background-color: #0C0F20;
+        min-height: 300px;
+        //margin-top: -104px;
+        position: relative;
+        width: 100%;
+        z-index: 2;
+
+        @include media-breakpoint-down(lg){
+            margin-top: -40px;
+        }
+    }
+
+    .revduck-meet-us-text {
+        z-index: 4;
+        @include media-breakpoint-down(lg) {
+            background-image: url("../assets/meet-us-small.svg");
+            background-size: 340px 55.4px;
+            width: 340px;
+            height: 55.4px;
+        }
+        @include media-breakpoint-up(lg) {
+            background-image: url("../assets/meet-us.svg");
+            background-size: 1275px 153px;
+            width: 1275px;
+            height: 153px;
+        }
+    }
+
+    .revduck-frames-wrapper {
+        white-space: nowrap;
+        margin-top: 8px;
+        overflow-x: auto;
+        display: flex;
+        flex: 1;
+        position: relative;
+
+        &::-webkit-scrollbar {
+            height: 8px;
+            margin-right: 16px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #182756; /* Color of the scrollbar track */
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #FFFFFF; /* Color of the scrollbar thumb */
+        }
+
+        max-height: fit-content;
+
+        // Size of 3 frames. When screen is less than 1528px - scrollbar appears.
+        @media (min-width: 1528px) {
+            justify-content: center;
+            flex-direction: row;
+            margin-bottom: 58px;
+        }
+
+        @media (max-width: 1528px) {
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            margin-left: 16px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            //padding-left: 22.5px;
+        }
+
+        @include media-breakpoint-up(lg) {
+        }
+
+        .revduck-meet-us-frame {
+            display: inline-block;
+            background-image: url("../assets/frames/meet-us-frame.svg");
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+                background-image: url("../assets/frames/meet-us-frame-hover.svg");
+            }
+
+            @include media-breakpoint-down(lg) {
+                margin-right: 16px;
+                background-size: 295px 150px;
+                width: 295px;
+                height: 150px;
+                min-width: 295px;
+                min-height: 150px;
+
+                .revduck-frame-logo {
+                    position: absolute;
+                    display: block;
+                    //margin-left: 171px;
+                    right: 24.5px;
+                    margin-top: 68px;
+                    transform: scale(0.71);
+                    transform-origin: right;
+                }
+            }
+            @include media-breakpoint-up(lg) {
+                margin-right: 40px;
+                background-size: 464px 235.04px;
+                width: 464px;
+                height: 235.04px;
+                min-width: 464px;
+                min-height: 235.04px;
+                //padding-left: 223.79px;
+                .revduck-frame-logo {
+                    position: absolute;
+                    display: block;
+                    margin-left: 286px;
+                    margin-top: 113px;
+                    right: 37.8px;
+                }
+            }
+
+            .revduck-frame-country-date {
+                position: absolute;
+
+                font-family: 'Audiowide', sans-serif;
+                @include media-breakpoint-up(lg) {
+                    margin-left: 39px;
+                    margin-top: 42.4px;
+                    line-height: 17.6px;
+                    font-size: 16px;
+                    .revduck-frame-date {
+                        font-size: 12.8px;
+                        line-height: 14.4px;
+                        margin-top: 12px;
+                    }
+                }
+                @include media-breakpoint-down(lg) {
+                    margin-left: 23.39px;
+                    margin-top: 25.09px;
+                    line-height: 14.4px;
+                    font-size: 16px;
+                    .revduck-frame-date {
+                        margin-top: 7.78px;
+                        font-size: 12px;
+                        line-height: 10.8px;
+                    }
+                }
+
+                color: #FFFFFF;
+            }
         }
     }
 }

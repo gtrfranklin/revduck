@@ -6,6 +6,10 @@
     z-index: 999;
     width: 100%;
     transition: background-color 0.3s ease, margin-top 0.3s ease, margin-bottom 0.3s ease;
+
+    @include media-breakpoint-down(lg) {
+        background-color: #0C0F20;
+    }
 }
 
 .scrolled {
